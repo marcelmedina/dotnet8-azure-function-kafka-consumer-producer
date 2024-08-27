@@ -1,0 +1,21 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+
+    "AzureWebJobs.RunSingle.Disabled": false,
+    "AzureWebJobs.RunSingleSecond.Disabled": true,
+    "AzureWebJobs.RunSingleThird.Disabled": true,
+    "AzureWebJobs.RunBatch.Disabled": true,
+    "AzureWebJobs.RunBatchSecond.Disabled": true,
+    "AzureWebJobs.RunBatchThird.Disabled": true,
+
+    "BootstrapServers": "server:9092",
+    "SaslUsername": "username",
+    "SaslPassword": "password",
+    "SecurityProtocol": "SaslSsl",
+    "SaslMechanism": "Plain",
+    "Topic": "topic"
+  }
+}
