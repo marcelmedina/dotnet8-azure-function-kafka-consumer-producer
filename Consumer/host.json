@@ -1,0 +1,20 @@
+{
+  "version": "2.0",
+  "extensions": {
+    "kafka": {
+      "maxBatchSize": 100,
+      "SubscriberIntervalInSeconds": 1,
+      "ExecutorChannelCapacity": 1,
+      "ChannelFullRetryIntervalInMs": 50
+    }
+  },
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": false,
+        "excludedTypes": "Request"
+      },
+      "enableLiveMetricsFilters": true
+    }
+  }
+}
