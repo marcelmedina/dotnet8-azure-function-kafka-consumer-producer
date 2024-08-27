@@ -6,25 +6,11 @@ using Producer.Common;
 
 namespace Producer
 {
-    public class MultipleOutputType
+    public class KafkaOutputWithHeaders
     {
-        [KafkaOutput("%BootstrapServers%",
-            "%Topic%",
-            Username = "%SaslUsername%",
-            Password = "%SaslPassword%",
-            Protocol = BrokerProtocol.SaslSsl,
-            EnableIdempotence = true,
-            AuthenticationMode = BrokerAuthenticationMode.Plain
-        )]
-        public string? Kevent { get; set; }
+        [Function(nameof(KafkaOutputWithHeadersFunction))]
 
-        public HttpResponseData HttpResponse { get; set; }
-
-
-
-        [Function(nameof(Output))]
-
-        public static MultipleOutputType Output(
+        public static MultipleOutputType KafkaOutputWithHeadersFunction(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequestData req,
             FunctionContext executionContext)
         {
