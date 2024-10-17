@@ -4,6 +4,9 @@
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
 
+    "AzureWebJobs.KafkaOutputWithHeadersFunction.Disabled": false,
+    "AzureWebJobs.KafkaOutputManyWithHeadersFunction.Disabled": true,
+
     "BootstrapServers": "server:9092",
     "SaslUsername": "username",
     "SaslPassword": "password",
